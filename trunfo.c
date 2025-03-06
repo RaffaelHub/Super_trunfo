@@ -2,6 +2,7 @@
 #include <string.h>
 
 int main() {
+    // declarações de variaveis
     int habitantes_1, habitantes_2,pib_1,pib_2;
     
     char letra_carta1; 
@@ -9,7 +10,8 @@ int main() {
 
     printf("----------Seja bem vindo----------\n");
     printf("Vamos jogar SUPER_TRUNFO \n");
-
+    // primeira carta
+    
     printf("Insira uma Letra de 'A' a 'H': ");
     scanf(" %c", &letra_carta1);
     printf("Insita um code EXEMPLO(A01): ");
@@ -22,6 +24,8 @@ int main() {
     scanf("  %d", &habitantes_1);
     printf("Qual o PIB da cidade? ");
     scanf("  %d", &pib_1);
+
+    // segunda parte
 
     return 0;
 
