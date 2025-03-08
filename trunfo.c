@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <string.h>
 
-// Não usei o fgets, por pedido do professor, já que é para ser uma estrutura simples.
+
 // Grande gama de comentarios, para o melhor entendimento.
 
 
@@ -33,9 +34,11 @@ int main() {
     printf("Digite uma letra de 'A' a 'H': ");
     scanf(" %c", &estado1); // Armazena o estado da carta de 'A' a 'H'
     printf("Digite o código da carta (exemplo: A01): ");
-    scanf("%s", codigo_carta1); // não usei o &(pointer) nas variaveis que tem array, segunda minhas pesquisas, não precisa.
+    scanf(" %s", codigo_carta1); // não usei o &(pointer) nas variaveis que tem array, segunda minhas pesquisas, não precisa.
+    getchar();
     printf("Digite o nome da cidade (Sem espaços): ");
-    scanf("%s", cidade1); // Armazena o nome da cidade(sem espaços)
+    fgets(cidade1,30,stdin);
+    cidade1[strcspn(cidade1, "\n")] = 0;
     printf("Digite a quantidade de habitantes da cidade: ");
     scanf("%d", &populacao1); // Armazena os habitantes(população)
     printf("Digite A área da cidade (em quilômetros quadrados): ");
@@ -64,9 +67,11 @@ int main() {
     printf("Digite uma letra de 'A' a 'H': ");
     scanf(" %c", &estado2); // Armazena o estado da carta de 'A' a 'H'
     printf("Digite o código da carta (exemplo: A01): ");
-    scanf("%s", codigo_carta2); // Armazenar o código da carta
+    scanf(" %s", codigo_carta2); // Armazenar o código da carta
+    getchar();
     printf("Digite o nome da cidade (Sem espaços): ");
-    scanf("%s", cidade2); // Armazena o nome da cidade(sem espaços)
+    fgets(cidade2,30,stdin);
+    cidade1[strcspn(cidade2, "\n")] = 0;
     printf("Digite a quantidade de habitantes da cidade: ");
     scanf("%d", &populacao2); // Armazena os habitantes(população)
     printf("Digite a área da cidade (em quilômetros quadrados): ");
